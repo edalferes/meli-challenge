@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { fetchProducts, Product } from '@/lib/api';
+import Image from 'next/image';
 
 export default function HomePage() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -28,7 +29,7 @@ export default function HomePage() {
             href={`/product/${product.id}`}
             className="bg-white rounded shadow p-4 hover:shadow-md transition"
           >
-            <img
+            <Image
               src={product.images[0]}
               alt={product.title}
               className="w-full h-48 object-contain mb-2"

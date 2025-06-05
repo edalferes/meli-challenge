@@ -39,15 +39,15 @@ export default function ProductDetailPage() {
       {/* Breadcrumb */}
       <Breadcrumb />
 
-      {/* Grid principal */}
+      {/* Main Gris */}
       <div className="bg-white p-6 rounded shadow grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        {/* Coluna 1: Gallery */}
+        {/* Column 1: Gallery */}
         <div className="md:col-span-1">
           <ProductGallery images={product.images} />
         </div>
 
-        {/* Coluna 2: Summary + Payment + Description */}
+        {/* Column 2: Summary + Payment + Description */}
         <div className="md:col-span-1 flex flex-col space-y-6">
           <ProductSummary
             title={product.title}
@@ -61,7 +61,7 @@ export default function ProductDetailPage() {
           <ProductDescription description={product.description} />
         </div>
 
-        {/* Coluna 3: BuyBox */}
+        {/* Column 3: BuyBox */}
         <div className="md:col-span-1">
         <BuyBox
           price={product.price}

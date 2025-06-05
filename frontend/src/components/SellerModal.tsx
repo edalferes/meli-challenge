@@ -17,15 +17,15 @@ export default function SellerModal({ sellerName, sellerSales, onClose }: Seller
           ✕
         </button>
 
-        {/* Nome da loja */}
+        {/* Name */}
         <h2 className="text-2xl font-bold">{sellerName}</h2>
 
-        {/* Vendas */}
+        {/* Seller */}
         <div className="text-gray-700 mb-4">
           <p className="text-lg font-semibold">+{(sellerSales / 1000).toFixed(0)} mil vendas</p>
         </div>
 
-        {/* Barras de performance */}
+        {/* Performance bars */}
         <div className="space-y-4">
           <div>
             <p className="text-sm text-gray-600 mb-1">Entrega no prazo</p>

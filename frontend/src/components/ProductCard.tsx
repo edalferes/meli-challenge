@@ -2,6 +2,7 @@
 
 import { Product } from '@/lib/api';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface ProductCardProps {
   product: Product;
@@ -11,7 +12,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="border rounded shadow bg-white p-4 flex flex-col space-y-2 hover:ring-2 hover:ring-blue-500">
       {product.images.length > 0 && (
-        <img
+        <Image
           src={product.images[0]}
           alt={product.title}
           className="w-full h-48 object-contain"

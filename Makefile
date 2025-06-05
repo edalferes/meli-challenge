@@ -1,4 +1,4 @@
-.PHONY: help dev dev-frontend dev-backend test-backend lint-backend coverage-backend clean
+.PHONY: help dev dev-frontend dev-backend test-backend coverage-backend lint-backend lint-frontend build-frontend clean clean-backend clean-frontend setup-backend setup-frontend
 
 help:
 	@echo "Available commands:"
@@ -8,28 +8,61 @@ help:
 	@echo "  make test-backend          - Run backend tests"
 	@echo "  make coverage-backend      - Run backend tests with coverage"
 	@echo "  make lint-backend          - Run backend linting"
-	@echo "  make clean                 - Clean temp files"
+	@echo "  make lint-frontend         - Run frontend linting"
+	@echo "  make build-frontend        - Build frontend production bundle"
+	@echo "  make clean                 - Clean all temporary files (frontend + backend)"
+	@echo "  make clean-backend         - Clean backend temporary files"
+	@echo "  make clean-frontend        - Clean frontend build files"
+	@echo "  make setup-backend         - Setup backend environment (uv sync)"
+	@echo "  make setup-frontend        - Install frontend dependencies (npm install)"
 
+# Dev servers
 dev-frontend:
 	@echo "Starting frontend development server..."
-	@cd frontend && npm install && npm run dev
+	@make -C frontend dev-frontend
 
 dev-backend:
 	@echo "Starting backend development server..."
-	@cd backend && make dev-backend
+	@make -C backend dev-backend
 
+# Combined development command
 dev:
 	@echo "Starting both frontend and backend development servers..."
-	@make dev-frontend & make dev-backend
+	@make dev-backend & make dev-frontend
 
+# Backend operations
 test-backend:
-	@cd backend && make test
+	@make -C backend test
 
 coverage-backend:
-	@cd backend && make coverage
+	@make -C backend coverage
 
 lint-backend:
-	@cd backend && make lint
+	@make -C backend lint
 
+# Frontend operations
+lint-frontend:
+	@make -C frontend lint
+
+build-frontend:
+	@make -C frontend build
+
+# Clean commands
 clean:
-	@cd backend && make clean
+	@make clean-backend
+	@make clean-frontend
+
+clean-backend:
+	@make -C backend clean
+
+clean-frontend:
+	@make -C frontend clean
+
+# Setup environments
+setup-backend:
+	@echo "Setting up backend environment..."
+	@cd backend && uv sync
+
+setup-frontend:
+	@echo "Installing frontend dependencies..."
+	@cd frontend && npm install

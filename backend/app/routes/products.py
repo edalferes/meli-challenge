@@ -1,12 +1,9 @@
-# app/routes/products.py
-
 from fastapi import APIRouter
 from app.schemas import ProductDetail
 from app.services.product_service import ProductService
 
 router = APIRouter()
 
-# Type the service instance
 product_service: ProductService = ProductService()
 
 

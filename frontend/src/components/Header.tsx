@@ -1,8 +1,7 @@
-// src/components/Header.tsx
-
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   return (
@@ -11,7 +10,7 @@ export default function Header() {
 
         {/* Logo */}
         <Link href="/" className="flex-shrink-0 mr-4">
-          <img
+          <Image
             src="/images/logo_ml.png"
             alt="Mercado Livre"
             className="h-12 w-auto"
@@ -26,7 +25,7 @@ export default function Header() {
               placeholder="Buscar produtos, marcas e muito mais..."
               className="w-full h-10 px-4 pr-10 rounded border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
             />
-            {/* Lupa */}
+            {/* Search */}
             <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none text-gray-500">
               🔍
             </div>

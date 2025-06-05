@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface ProductGalleryProps {
   images: string[];
@@ -11,10 +12,10 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
 
   return (
     <div className="flex space-x-4">
-      {/* Miniaturas */}
+      {/* Thumbnails */}
       <div className="flex flex-col space-y-2">
         {images.map((img, idx) => (
-          <img
+          <Image
             key={idx}
             src={img}
             alt={`Thumbnail ${idx}`}
@@ -24,9 +25,9 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
         ))}
       </div>
 
-      {/* Imagem grande */}
+      {/* Large Image */}
       <div className="flex-1 flex items-center justify-center">
-        <img
+        <Image
           src={selectedImage}
           alt="Selected"
           className="max-h-[400px] object-contain"

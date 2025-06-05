@@ -23,7 +23,7 @@ export default function BuyBox({ price, stock, sellerName, sellerSales }: BuyBox
 
         <p className="text-green-600 font-semibold">Chegará grátis amanhã</p>
 
-                {/* Preço */}
+        {/* Price */}
         {price !== undefined && (
           <div className="text-3xl font-bold text-gray-800">
             R$ {price.toFixed(2).replace('.', ',')}
