@@ -11,69 +11,114 @@
     },
     "stock": 25,
     "images": [
-      "/images/products/celular_1.jpeg"
+      "/images/products/celular_1.png"
     ]
   },
   {
     "id": "2",
-    "title": "Notebook ABC",
-    "description": "Notebook para trabalho e estudo.",
-    "price": 3499.90,
-    "payment_methods": ["credit_card", "pix"],
+    "title": "Notebook Lenovo Ideapad",
+    "description": "Notebook Lenovo Ideapad 1 Intel Core i3 1215U 8GB RAM 256GB SSD Windows 11 Home Tela 15,6",
+    "price": 2799,
+    "payment_methods": ["cartao", "pix"],
     "seller": {
       "name": "TechStore",
       "rating": 4.5
     },
-    "stock": 10,
+    "stock": 17,
     "images": [
-      "https://fastly.picsum.photos/id/8/5000/3333.jpg?hmac=OeG5ufhPYQBd6Rx1TAldAuF92lhCzAhKQKttGfawWuA"
+      "/images/products/notebook_1.png"
     ]
   }
   ,
   {
     "id": "3",
-    "title": "Fone de Ouvido Bluetooth",
-    "description": "Fone de ouvido sem fio com alta qualidade de som.",
-    "price": 299.99,
-    "payment_methods": ["credit_card", "pix", "boleto"],
+    "title": "Fone De Ouvido Sem Fio",
+    "description": "Fone De Ouvido Sem Fio M10 Tws Bluetooth 5.1 com Microfone Cor Preto resistente e água",
+    "price": 23.58,
+    "payment_methods": ["cartao", "pix", "boleto"],
     "seller": {
       "name": "AudioStore",
-      "rating": 4.7
+      "rating": 4.10
     },
-    "stock": 50,
+    "stock": 57,
     "images": [
-      "https://via.placeholder.com/300x300.png?text=Fone+de+Ouvido"
+      "/images/products/phone_1.png"
     ]
   },
   {
     "id": "4",
-    "title": "Smartwatch DEF",
-    "description": "Relógio inteligente com monitoramento de saúde.",
-    "price": 899.90,
-    "payment_methods": ["credit_card", "pix"],
+    "title": "Relógio Smartwatch",
+    "description": "Relógio Smartwatch Em Toque Alexa Ip68 Bluetooth 5.3 Caixa Branco Pulseira Preto Bisel Preto Desenho Da Pulseira Milanese",
+    "price": 167.44,
+    "payment_methods": ["cartao", "pix"],
     "seller": {
       "name": "GadgetWorld",
       "rating": 4.6
     },
-    "stock": 15,
+    "stock": 26,
     "images": [
-      "https://via.placeholder.com/300x300.png?text=Smartwatch"
+      "/images/products/relogio_1.png"
     ]
   },
   {
     "id": "5",
-    "title": "Câmera Digital GHI",
-    "description": "Câmera digital compacta para fotos e vídeos.",
-    "price": 1299.99,
-    "payment_methods": ["credit_card", "pix", "boleto"],
+    "title": "Câmera Filmadora 4k/30fps",
+    "description": "Câmera Filmadora 4k/30fps 48mp 3'' Ir Visión Nocturna Câmera Câmera Filmadora Profissional P/ Youtuber Cor Preto 4k/30fps 48mp Câmera",
+    "price": 799.40,
+    "payment_methods": ["cartao"],
     "seller": {
       "name": "PhotoPro",
-      "rating": 4.9
+      "rating": 3.9
     },
-    "stock": 8,
+    "stock": 18,
     "images": [
-      "https://via.placeholder.com/300x300.png?text=C%C3%A2mera+Digital"
+      "/images/products/camera_1.png"
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Óculos De Sol Masculino",
+    "description": "Óculos De Sol Masculino Eco Bacon Beans Quadrado Preto",
+    "price": 181.99,
+    "payment_methods": ["pix", "boleto"],
+    "seller": {
+      "name": "Bacon Beans",
+      "rating": 7.9
+    },
+    "stock": 184,
+    "images": [
+      "/images/products/oculos_1.png"
     ]
   }
-  
+  ,
+  {
+    "id": "7",
+    "title": "Sony PlayStation 5",
+    "description": "Sony PlayStation 5 Slim Digital CFI-2000 1 TB",
+    "price": 3299,
+    "payment_methods": ["cartao", "pix", "boleto"],
+    "seller": {
+      "name": "GameZone",
+      "rating": 2.1
+    },
+    "stock": 256,
+    "images": [
+      "/images/products/video_game_1.png"
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Liquidificador L-99-fb",
+    "description": "Liquidificador L-99-fb Turbo Power 2,2 L Potência De 550w Cor Preto Mondial 127V",
+    "price": 99.90,
+    "payment_methods": ["cartao", "pix", "boleto"],
+    "seller": {
+      "name": "EletroShop",
+      "rating": 7.1
+    },
+    "stock": 181,
+    "images": [
+      "/images/products/liquidificador_1.png"
+    ]
+  }
 ]
