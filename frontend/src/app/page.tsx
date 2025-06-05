@@ -4,22 +4,28 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { fetchProducts, Product } from '@/lib/api';
 import Image from 'next/image';
+import ErrorMessage from '@/components/ErrorMessage';
 
 export default function HomePage() {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [apiError, setApiError] = useState<boolean>(false);
 
   useEffect(() => {
     fetchProducts()
       .then(setProducts)
+      .catch((err) => {
+        console.error('Erro ao buscar produtos:', err);
+        setApiError(true);
+      })
       .finally(() => setLoading(false));
   }, []);
 
   if (loading) return <p className="p-4">Carregando produtos...</p>;
+  if (apiError) return <ErrorMessage type="500" />;
 
   return (
     <main className="bg-[#ebebeb] min-h-screen">
-
 
       {/* Product List */}
       <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

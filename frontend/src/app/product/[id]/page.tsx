@@ -10,13 +10,14 @@ import ProductSummary from '@/components/ProductSummary';
 import PaymentMethods from '@/components/PaymentMethods';
 import ProductDescription from '@/components/ProductDescription';
 import BuyBox from '@/components/BuyBox';
-import ProductNotFound from '@/components/ProductNotFound';
+import ErrorMessage from '@/components/ErrorMessage';
 
 export default function ProductDetailPage() {
   const params = useParams();
   const { id } = params;
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
+  const [apiError, setApiError] = useState<boolean>(false);
 
   useEffect(() => {
     if (typeof id === 'string') {
@@ -24,14 +25,21 @@ export default function ProductDetailPage() {
         .then(setProduct)
         .catch((err) => {
           console.error('Erro ao buscar produto:', err);
-          setProduct(null);
+
+          // Verifica se o erro é 404
+          if (err.message === '404') {
+            setProduct(null);
+          } else {
+            setApiError(true);
+          }
         })
         .finally(() => setLoading(false));
     }
   }, [id]);
 
   if (loading) return <p className="p-4">Carregando produto...</p>;
-  if (!product) return <ProductNotFound />;
+  if (apiError) return <ErrorMessage type="500" />;
+  if (!product) return <ErrorMessage type="404" />;
 
   return (
     <main className="max-w-7xl mx-auto p-4 space-y-6">
@@ -39,7 +47,7 @@ export default function ProductDetailPage() {
       {/* Breadcrumb */}
       <Breadcrumb />
 
-      {/* Main Gris */}
+      {/* Main Grid */}
       <div className="bg-white p-6 rounded shadow grid grid-cols-1 md:grid-cols-3 gap-8">
 
         {/* Column 1: Gallery */}
@@ -52,7 +60,6 @@ export default function ProductDetailPage() {
           <ProductSummary
             title={product.title}
             ratings={product.rating}
-            // random
             ratingsCount={Math.floor(Math.random() * 1000)}
           />
 
@@ -63,12 +70,12 @@ export default function ProductDetailPage() {
 
         {/* Column 3: BuyBox */}
         <div className="md:col-span-1">
-        <BuyBox
-          price={product.price}
-          stock={product.stock}
-          sellerName={product.seller.name}
-          sellerSales={product.seller.sales}
-        />
+          <BuyBox
+            price={product.price}
+            stock={product.stock}
+            sellerName={product.seller.name}
+            sellerSales={product.seller.sales}
+          />
         </div>
 
       </div>

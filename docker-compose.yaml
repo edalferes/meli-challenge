@@ -1,0 +1,30 @@
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: meli-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - UVICORN_RELOAD=true
+    networks:
+      - meli-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: meli-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:8000
+    networks:
+      - meli-network
+
+networks:
+  meli-network:
+    driver: bridge

@@ -145,6 +145,14 @@ meli-challenge/
 └── Makefile          # Makefile raiz
 ```
 
+## Extras
+
+Caso queria rodar usando docker compose use:
+
+```bash
+make docker-compose
+```
+
 ## Observações finais
 
 - O projeto foi validado tanto em **MacOS** quanto em **Ubuntu 22.04 LTS**
