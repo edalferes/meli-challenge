@@ -1,5 +1,3 @@
-// src/components/BuyBox.tsx
-
 'use client';
 
 interface BuyBoxProps {
@@ -9,26 +7,29 @@ interface BuyBoxProps {
 
 export default function BuyBox({ stock, sellerName }: BuyBoxProps) {
   return (
-    <div className="border p-4 rounded space-y-3 text-sm text-gray-800 w-full">
-
+    <div className="border border-gray-200 rounded-md p-4 space-y-4 shadow-sm bg-white">
       <p className="text-green-600 font-semibold">Chegará grátis amanhã</p>
-      <p className="text-blue-600 text-xs cursor-pointer">Outras formas de entrega</p>
+      <p className="text-sm text-blue-600">Outras formas de entrega</p>
 
-      <p className="mt-2"><span className="font-semibold">Estoque disponível:</span> {stock}</p>
-      <p><span className="font-semibold">Quantidade:</span> 1 unidade</p>
+      <p className="font-semibold text-gray-900">Estoque disponível:</p>
+      <p className="text-gray-800">{stock}</p>
 
-      <button className="w-full bg-blue-500 text-white py-2 rounded font-semibold hover:bg-blue-600 transition">
+      <p className="font-semibold text-gray-900">Quantidade:</p>
+      <p className="text-gray-800">1 unidade</p>
+
+      <button className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition font-medium">
         Comprar agora
       </button>
 
-      <button className="w-full bg-gray-100 text-gray-900 py-2 rounded font-semibold hover:bg-gray-200 transition">
+      <button className="w-full bg-gray-100 text-gray-800 py-2 rounded hover:bg-gray-200 transition font-medium">
         Adicionar ao carrinho
       </button>
 
-      <div className="text-xs text-gray-600 border-t pt-2 mt-2">
-        Vendido por <span className="font-semibold">{sellerName}</span>
-      </div>
+      <hr className="border-gray-200" />
 
+      <p className="text-sm text-gray-600">
+        Vendido por <span className="font-semibold text-gray-800">{sellerName}</span>
+      </p>
     </div>
   );
 }

@@ -1,22 +1,14 @@
 'use client';
 
-type ProductSpecsProps = {
-  specs: Record<string, string>;
-};
+interface ProductSpecsProps {
+  stock?: number;
+}
 
-export default function ProductSpecs({ specs }: ProductSpecsProps) {
-  if (!specs) return null;
-
+export default function ProductSpecs({ stock }: ProductSpecsProps) {
   return (
-    <div className="bg-white p-4 rounded shadow space-y-2">
-      <h2 className="text-lg font-semibold text-gray-800">Especificações do produto</h2>
-      <ul className="list-disc list-inside text-gray-700">
-        {Object.entries(specs).map(([key, value]) => (
-          <li key={key}>
-            <strong>{key}:</strong> {value}
-          </li>
-        ))}
-      </ul>
+    <div className="border border-gray-200 rounded-lg p-4 bg-white space-y-2">
+      <h2 className="font-semibold text-gray-900 mb-2">Estoque disponível:</h2>
+      <p className="text-green-600 font-bold">{stock ?? 0}</p>
     </div>
   );
 }

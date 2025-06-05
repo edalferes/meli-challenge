@@ -36,40 +36,36 @@ export default function ProductDetailPage() {
       {/* Breadcrumb */}
       <Breadcrumb />
 
-      {/* Grid principal estilo ML */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 bg-white p-6 rounded shadow">
+      {/* GRID principal */}
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 
-        {/* Coluna 1: Galeria */}
-        <div className="md:col-span-5">
+        {/* Coluna esquerda (gallery + detalhes) */}
+        <div className="md:col-span-8 flex space-x-8">
+
+          {/* Imagens */}
           <ProductGallery images={product.images} />
-        </div>
 
-        {/* Coluna 2: Detalhes + Métodos + Specs */}
-        <div className="md:col-span-5 space-y-4">
-
-          <ProductSummary
-            title={product.title}
-            ratings={product.seller.rating}
-            ratingsCount={150} // ainda mockado
-          />
-
-          <PaymentMethods methods={product.payment_methods} />
-
-          <ProductSpecs specs={{
-            'Estoque disponível': product.stock?.toString() ?? '0',
-            // aqui você pode adicionar mais specs se quiser
-          }} />
+          {/* Detalhes */}
+          <div className="flex flex-col space-y-4 flex-1">
+            <ProductSummary
+              title={product.title}
+              ratings={product.seller.rating}
+              ratingsCount={150} // exemplo
+            />
+            <PaymentMethods methods={product.payment_methods} />
+            <ProductSpecs stock={product.stock} />
+          </div>
 
         </div>
 
-        {/* Coluna 3: BuyBox lateral */}
-        <div className="md:col-span-2">
+        {/* Coluna direita (BuyBox) */}
+        <div className="md:col-span-4">
           <BuyBox stock={product.stock ?? 0} sellerName={product.seller.name} />
         </div>
 
       </div>
 
-      {/* Descrição (abaixo da grid) */}
+      {/* Descrição do produto */}
       <ProductDescription description={product.description} />
 
     </main>
