@@ -15,8 +15,6 @@ class LogFilterMiddleware(BaseHTTPMiddleware):
         call_next: Callable[[Request], Awaitable[Response]],
     ) -> Response:
         if request.url.path not in EXCLUDED_PATHS:
-            # ou use logger.info()
             print(f"[REQUEST] {request.method} {request.url.path}")
-
         response = await call_next(request)
         return response
