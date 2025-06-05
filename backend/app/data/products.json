@@ -105,7 +105,8 @@
     },
     "stock": 256,
     "images": [
-      "/images/products/video_game_1.png"
+      "/images/products/video_game_1.png",
+      "/images/products/video_game_2.png"
     ]
   },
   {

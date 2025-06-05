@@ -1,6 +1,14 @@
 import './globals.css';
 import Header from '@/components/Header';
 
+export const metadata = {
+  title: 'Mercado Livre - Challenge',
+  description: 'Página de detalhes de produtos - Mercado Livre',
+  icons: {
+    icon: '/images/favicon.ico',
+  },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-br">
