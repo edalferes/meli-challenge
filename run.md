@@ -1,4 +1,4 @@
-# 🛠️ Meli Challenge - Setup & Run Guide
+# Meli Challenge - Setup & Run Guide
 
 Este projeto contém uma aplicação fullstack composta por:
 
@@ -8,9 +8,9 @@ Este projeto contém uma aplicação fullstack composta por:
 
 ---
 
-## 📋 Pré-requisitos
+## Pré-requisitos
 
-### 🔹 Comuns (MacOS / Ubuntu Linux)
+### Comuns (MacOS / Ubuntu Linux)
 
 * **Python** `>= 3.11` (recomendado `3.13.x`)
 
@@ -38,26 +38,18 @@ sudo apt-get install -y nodejs
 
 * **Make** (já vem instalado em Mac e na maioria dos Linux)
 
-### 🔹 MacOS específico:
-
-Se usar **Mac com chip ARM (M1/M2/M3)**, recomendamos usar:
-
-```bash
-arch -arm64 zsh
-```
-
 ---
 
 ## 🚀 Como rodar o projeto (dev)
 
-### 1️⃣ Clone o repositório:
+### Clone o repositório:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/meli-challenge.git
+git clone git@github.com:edalferes/meli-challenge.git
 cd meli-challenge
 ```
 
-### 2️⃣ Configure o ambiente
+### Configure o ambiente
 
 #### Backend:
 
@@ -71,7 +63,7 @@ make setup-backend
 make setup-frontend
 ```
 
-### 3️⃣ Rodar em modo desenvolvimento (ambos):
+### Rodar em modo desenvolvimento (ambos):
 
 ```bash
 make dev
@@ -96,12 +88,12 @@ Acesse as URLs exibidas no terminal para acessar a aplicação:
 Frontend: [http://localhost:3000](http://localhost:3000)  
 Backend: [http://localhost:8000](http://localhost:8000)
 
-Para acessar a docuemntacao da API do FastAPI, visite:
+Para acessar a documentação da API do FastAPI, use:
 [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ---
 
-## 💢 Testes & Lint
+## Testes & Lint
 
 ### Rodar testes backend:
 
@@ -127,13 +119,13 @@ make lint-backend
 make -C frontend lint
 ```
 
-## 🛉 Limpeza
+## Limpeza
 
 ```bash
 make clean
 ```
 
-## ⚙️ Estrutura do projeto
+## Estrutura do projeto
 
 ```text
 meli-challenge/
@@ -151,9 +143,9 @@ meli-challenge/
 └── Makefile          # Makefile raiz
 ```
 
-## 🌟 Observações finais
+## Observações finais
 
-👉 O projeto foi validado tanto em **MacOS (Sonoma 14.x)** quanto em **Ubuntu 22.04 LTS**
-👉 Para ambientes Windows, recomenda-se usar WSL (Ubuntu)
+- O projeto foi validado tanto em **MacOS (Sonoma 14.x)** quanto em **Ubuntu 22.04 LTS**
+- Para ambientes Windows, recomenda-se usar WSL (Ubuntu)
 
 ---
