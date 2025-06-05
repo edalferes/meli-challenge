@@ -119,15 +119,11 @@ make lint-backend
 make -C frontend lint
 ```
 
----
-
 ## 🛉 Limpeza
 
 ```bash
 make clean
 ```
-
----
 
 ## ⚙️ Estrutura do projeto
 
@@ -147,11 +143,9 @@ meli-challenge/
 └── Makefile          # Makefile raiz
 ```
 
----
-
 ## 🌟 Observações finais
 
 👉 O projeto foi validado tanto em **MacOS (Sonoma 14.x)** quanto em **Ubuntu 22.04 LTS**
-👉 Para ambientes Windows, recomenda-se usar WSL (Ubuntu) ou rodar via Docker
+👉 Para ambientes Windows, recomenda-se usar WSL (Ubuntu)
 
 ---
