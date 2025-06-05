@@ -35,6 +35,10 @@ sudo apt-get install -y nodejs
 ```
 
 * **Make** (já vem instalado em Mac e na maioria dos Linux)
+ mais se precisar instalar:
+
+  * Em Mac: via `brew install make`
+  * Em Ubuntu: via `sudo apt install make`
 
 ---
 
@@ -143,7 +147,7 @@ meli-challenge/
 
 ## Observações finais
 
-- O projeto foi validado tanto em **MacOS (Sonoma 14.x)** quanto em **Ubuntu 22.04 LTS**
+- O projeto foi validado tanto em **MacOS** quanto em **Ubuntu 22.04 LTS**
 - Para ambientes Windows, recomenda-se usar WSL (Ubuntu)
 
 ---
