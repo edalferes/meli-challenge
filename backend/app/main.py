@@ -1,6 +1,11 @@
+
 from fastapi import FastAPI
-from app.routes import products, health
 from fastapi.responses import RedirectResponse, Response
+from fastapi.middleware.cors import CORSMiddleware
+from app.middleware.log_filter import LogFilterMiddleware
+from app.routes import products, health
+from app.config import settings
+
 
 description = """
 RESTful API for displaying product details.  
@@ -18,6 +23,20 @@ app = FastAPI(
         "email": "edmilson.alferes@gmail.com",
         "url": "https://ed.alpheres.cloud/",
     },
+)
+
+
+# Register middleware
+app.add_middleware(LogFilterMiddleware)
+
+
+# CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=settings.cors_origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Register API routes

@@ -1,17 +1,17 @@
 [
   {
     "id": "1",
-    "title": "Smartphone XYZ",
-    "description": "Um smartphone de última geração.",
-    "price": 1999.99,
-    "payment_methods": ["credit_card", "pix", "boleto"],
+    "title": "Samsung Galaxy A15",
+    "description": "Samsung Galaxy A15 4G Dual SIM 128 GB Azul-claro 4 GB RAM",
+    "price": 854.10,
+    "payment_methods": ["cartao", "pix", "boleto"],
     "seller": {
       "name": "Loja Oficial XYZ",
       "rating": 4.8
     },
     "stock": 25,
     "images": [
-      "https://via.placeholder.com/300x300.png?text=Smartphone"
+      "/images/products/celular_1.jpeg"
     ]
   },
   {
@@ -26,7 +26,7 @@
     },
     "stock": 10,
     "images": [
-      "https://via.placeholder.com/300x300.png?text=Notebook"
+      "https://fastly.picsum.photos/id/8/5000/3333.jpg?hmac=OeG5ufhPYQBd6Rx1TAldAuF92lhCzAhKQKttGfawWuA"
     ]
   }
   ,

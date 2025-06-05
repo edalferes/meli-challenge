@@ -1,7 +1,7 @@
 [project]
-name = "backend"
+name = "meli-challenge-backend"
 version = "0.1.0"
-description = "Add your description here"
+description = "Backend to use MELI Challenge"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -11,6 +11,7 @@ dependencies = [
     "httpx>=0.28.1",
     "mypy>=1.16.0",
     "pydantic>=2.11.5",
+    "pydantic-settings>=2.9.1",
     "pytest>=8.4.0",
     "pytest-cov>=6.1.1",
     "uvicorn>=0.34.3",
