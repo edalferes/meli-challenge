@@ -11,6 +11,8 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0 mr-4">
           <Image
+            width={120}
+            height={40}
             src="/images/logo_ml.png"
             alt="Mercado Livre"
             className="h-12 w-auto"

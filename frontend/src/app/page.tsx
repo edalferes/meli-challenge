@@ -30,6 +30,8 @@ export default function HomePage() {
             className="bg-white rounded shadow p-4 hover:shadow-md transition"
           >
             <Image
+              width={200}
+              height={200}
               src={product.images[0]}
               alt={product.title}
               className="w-full h-48 object-contain mb-2"

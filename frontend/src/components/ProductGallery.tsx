@@ -16,6 +16,8 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
       <div className="flex flex-col space-y-2">
         {images.map((img, idx) => (
           <Image
+            width={64}
+            height={64}
             key={idx}
             src={img}
             alt={`Thumbnail ${idx}`}
@@ -28,6 +30,8 @@ export default function ProductGallery({ images }: ProductGalleryProps) {
       {/* Large Image */}
       <div className="flex-1 flex items-center justify-center">
         <Image
+          width={400}
+          height={400}
           src={selectedImage}
           alt="Selected"
           className="max-h-[400px] object-contain"
