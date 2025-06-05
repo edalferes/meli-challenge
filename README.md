@@ -42,26 +42,30 @@ meli-challenge/
 
 ## Funcionalidades implementadas
 
-### Frontend (página de detalhe do produto)
+### Frontend 
 
-- Imita layout do Mercado Livre
-- Exibe:
-  - Imagens de produto (com galeria e lupa)
-  - Título
-  - Descrição
-  - Preço
-  - Métodos de pagamento
-  - Informações do vendedor
-  - Estoque disponível
-  - Quantidade selecionável
-  - Modal com detalhes da loja
-  - Página responsiva
+- Página de detalhe do produto)
+  - Tem a aparencia do layout do Mercado Livre
+  - Exibe:
+    - Imagens de produto (com galeria e lupa)
+    - Título
+    - Descrição
+    - Preço
+    - Métodos de pagamento
+    - Informações do vendedor
+    - Estoque disponível
+    - Quantidade selecionável
+    - Modal com detalhes da loja
+    - Página responsiva
+- Pagina de listagem de produtos
+- Pagina de erro 404 personalizada
 
 ### Backend (API REST)
 
 - Endpoint GET /v1/products/{product_id}
 - Endpoint GET /v1/products (listagem paginada)
-- Endpoins Swagger para documentação automática /docs
+- Endpoint GET /v1/health (verifica se o serviço está ativo)
+- Endpoins Swagger para documentação automática GET /docs
 - Schemas Pydantic para validação de dados
 - Tratamento de erros com respostas documentadas
 - 100% de cobertura de testes
