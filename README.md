@@ -63,7 +63,7 @@ meli-challenge/
 - Endpoint GET /v1/products (listagem paginada)
 - Endpoins Swagger para documentação automática /docs
 - Schemas Pydantic para validação de dados
-- Tratamento de erros (404, 500) com respostas documentadas
+- Tratamento de erros com respostas documentadas
 - 100% de cobertura de testes
 
 ---
