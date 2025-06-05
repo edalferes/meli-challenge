@@ -91,6 +91,14 @@ make dev-backend
 make dev-frontend
 ```
 
+Acesse as URLs exibidas no terminal para acessar a aplicação:
+
+Frontend: [http://localhost:3000](http://localhost:3000)  
+Backend: [http://localhost:8000](http://localhost:8000)
+
+Para acessar a docuemntacao da API do FastAPI, visite:
+[http://localhost:8000/docs](http://localhost:8000/docs)
+
 ---
 
 ## 💢 Testes & Lint
