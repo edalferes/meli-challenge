@@ -1,8 +1,27 @@
 # MELI Challenge - Product Detail Page
 
-Este projeto implementa uma página de detalhes de produto inspirada no Mercado Livre, com um backend em FastAPI e um frontend em Next.js + React.
+Este projeto implementa uma página de detalhes de produto inspirada no Mercado Livre, com um backend em **FastAPI** e um frontend em **Next.js + React**.
 
 ## Stack utilizada
+
+Este projeto consiste em ums estrutura monorepo com backend e frontend, o seu conteudo consiste em
+
+```bash
+meli-challenge/
+├── backend/          # FastAPI app
+│   ├── app/          # Código da aplicação
+│   ├── tests/        # Testes automatizados
+│   ├── Makefile
+│   └── ...
+├── frontend/         # Next.js app
+│   ├── src/          # Componentes, pages
+│   ├── public/       # Imagens
+│   ├── Makefile
+│   └── ...
+├── run.md            # (este arquivo)
+└── Makefile          # Makefile raiz
+
+```
 
 ### Backend
 
