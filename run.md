@@ -2,9 +2,9 @@
 
 Este projeto contém uma aplicação fullstack composta por:
 
-👉 Backend: FastAPI + Uvicorn
-👉 Frontend: Next.js + React
-👉 Makefile para automação das tarefas
+- Backend: FastAPI + Uvicorn
+- Frontend: Next.js + React
+- Makefile para automação das tarefas
 
 ---
 
