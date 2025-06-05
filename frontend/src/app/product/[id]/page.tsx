@@ -1,17 +1,15 @@
-// src/app/product/[id]/page.tsx
-
 'use client';
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { fetchProductById, Product } from '@/lib/api';
+
 import Breadcrumb from '@/components/Breadcrumb';
 import ProductGallery from '@/components/ProductGallery';
 import ProductSummary from '@/components/ProductSummary';
 import PaymentMethods from '@/components/PaymentMethods';
-import ProductSpecs from '@/components/ProductSpecs';
-import BuyBox from '@/components/BuyBox';
 import ProductDescription from '@/components/ProductDescription';
+import BuyBox from '@/components/BuyBox';
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -33,36 +31,36 @@ export default function ProductDetailPage() {
   return (
     <main className="max-w-7xl mx-auto p-4 space-y-6">
 
+      {/* Breadcrumb */}
       <Breadcrumb />
 
-      {/* Grid principal: 3 colunas */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+      {/* Grid principal */}
+      <div className="bg-white p-6 rounded shadow grid grid-cols-1 md:grid-cols-3 gap-8">
 
-        {/* Coluna da galeria (3 colunas) */}
-        <div className="md:col-span-5">
+        {/* Coluna 1: Gallery */}
+        <div className="md:col-span-1">
           <ProductGallery images={product.images} />
         </div>
 
-        {/* Coluna dos detalhes (4 colunas) */}
-        <div className="md:col-span-4 space-y-4">
+        {/* Coluna 2: Summary + Payment + Description */}
+        <div className="md:col-span-1 flex flex-col space-y-6">
           <ProductSummary
             title={product.title}
             ratings={product.seller.rating}
-            ratingsCount={150} // Exemplo
+            ratingsCount={150}
           />
+
           <PaymentMethods methods={product.payment_methods} />
-          <ProductSpecs specs={{ 'Estoque disponível': product.stock ?? 0 }} />
+
+          <ProductDescription description={product.description} />
         </div>
 
-        {/* Coluna da BuyBox (3 colunas) */}
-        <div className="md:col-span-3">
+        {/* Coluna 3: BuyBox */}
+        <div className="md:col-span-1">
           <BuyBox stock={product.stock ?? 0} sellerName={product.seller.name} />
         </div>
 
       </div>
-
-      {/* Descrição do produto */}
-      <ProductDescription description={product.description} />
 
     </main>
   );

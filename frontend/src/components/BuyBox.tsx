@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 
 interface BuyBoxProps {
   stock: number;
@@ -11,8 +10,6 @@ interface BuyBoxProps {
 export default function BuyBox({ stock, sellerName }: BuyBoxProps) {
   const [quantity, setQuantity] = useState<number>(1);
   const maxOptions = Math.min(stock, 10);
-
-  const quantityOptions = Array.from({ length: maxOptions }, (_, i) => i + 1);
 
   return (
     <div className="border border-gray-200 rounded-lg p-4 bg-white space-y-4 w-full">
@@ -27,32 +24,17 @@ export default function BuyBox({ stock, sellerName }: BuyBoxProps) {
 
         <div>
           <p className="font-semibold mb-1">Quantidade:</p>
-
-          <Menu as="div" className="relative inline-block text-left w-full">
-            <div>
-              <MenuButton className="w-full border border-gray-300 rounded px-3 py-2 text-left focus:outline-none focus:ring-2 focus:ring-blue-400">
-                Quantidade: {quantity} {quantity === 1 ? 'unidade' : 'unidades'}
-              </MenuButton>
-            </div>
-
-            <MenuItems className="absolute z-10 mt-1 w-full bg-white border border-gray-200 rounded shadow-lg max-h-60 overflow-auto focus:outline-none">
-              {quantityOptions.map((qty) => (
-                <MenuItem key={qty}>
-                  {({ active }) => (
-                    <button
-                      onClick={() => setQuantity(qty)}
-                      className={`w-full text-left px-4 py-2 ${
-                        active ? 'bg-gray-100' : ''
-                      }`}
-                    >
-                      {qty} {qty === 1 ? 'unidade' : 'unidades'}
-                    </button>
-                  )}
-                </MenuItem>
-              ))}
-            </MenuItems>
-          </Menu>
-
+          <select
+            value={quantity}
+            onChange={(e) => setQuantity(Number(e.target.value))}
+            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          >
+            {Array.from({ length: maxOptions }, (_, i) => i + 1).map((qty) => (
+              <option key={qty} value={qty}>
+                {qty} {qty === 1 ? 'unidade' : 'unidades'}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
 
