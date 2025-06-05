@@ -1,10 +1,10 @@
+// src/app/product/[id]/page.tsx
+
 'use client';
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
-import Link from 'next/link';
 import { fetchProductById, Product } from '@/lib/api';
-
 import Breadcrumb from '@/components/Breadcrumb';
 import ProductGallery from '@/components/ProductGallery';
 import ProductSummary from '@/components/ProductSummary';
@@ -33,33 +33,29 @@ export default function ProductDetailPage() {
   return (
     <main className="max-w-7xl mx-auto p-4 space-y-6">
 
-      {/* Breadcrumb */}
       <Breadcrumb />
 
-      {/* GRID principal */}
+      {/* Grid principal: 3 colunas */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 
-        {/* Coluna esquerda (gallery + detalhes) */}
-        <div className="md:col-span-8 flex space-x-8">
-
-          {/* Imagens */}
+        {/* Coluna da galeria (3 colunas) */}
+        <div className="md:col-span-5">
           <ProductGallery images={product.images} />
-
-          {/* Detalhes */}
-          <div className="flex flex-col space-y-4 flex-1">
-            <ProductSummary
-              title={product.title}
-              ratings={product.seller.rating}
-              ratingsCount={150} // exemplo
-            />
-            <PaymentMethods methods={product.payment_methods} />
-            <ProductSpecs stock={product.stock} />
-          </div>
-
         </div>
 
-        {/* Coluna direita (BuyBox) */}
-        <div className="md:col-span-4">
+        {/* Coluna dos detalhes (4 colunas) */}
+        <div className="md:col-span-4 space-y-4">
+          <ProductSummary
+            title={product.title}
+            ratings={product.seller.rating}
+            ratingsCount={150} // Exemplo
+          />
+          <PaymentMethods methods={product.payment_methods} />
+          <ProductSpecs specs={{ 'Estoque disponível': product.stock ?? 0 }} />
+        </div>
+
+        {/* Coluna da BuyBox (3 colunas) */}
+        <div className="md:col-span-3">
           <BuyBox stock={product.stock ?? 0} sellerName={product.seller.name} />
         </div>
 

@@ -1,14 +1,19 @@
 'use client';
 
 interface ProductSpecsProps {
-  stock?: number;
+  specs: Record<string, string | number | undefined>;
 }
 
-export default function ProductSpecs({ stock }: ProductSpecsProps) {
+export default function ProductSpecs({ specs }: ProductSpecsProps) {
+  if (!specs || Object.keys(specs).length === 0) return null;
+
   return (
-    <div className="border border-gray-200 rounded-lg p-4 bg-white space-y-2">
-      <h2 className="font-semibold text-gray-900 mb-2">Estoque disponível:</h2>
-      <p className="text-green-600 font-bold">{stock ?? 0}</p>
+    <div className="border border-gray-200 rounded-lg p-4 bg-white text-sm text-gray-700 space-y-2">
+      {Object.entries(specs).map(([key, value]) => (
+        <div key={key}>
+          <span className="font-medium">{key}:</span> {value}
+        </div>
+      ))}
     </div>
   );
 }
