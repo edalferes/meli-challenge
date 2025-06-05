@@ -12,33 +12,33 @@ Este projeto contém uma aplicação fullstack composta por:
 
 ### Comuns (MacOS / Ubuntu Linux)
 
-* **Python** `>= 3.11` (recomendado `3.13.x`)
+- **Python** `>= 3.11` (recomendado `3.13.x`)
 
-  * Em Mac: via `brew install python@3.13`
-  * Em Ubuntu: via `sudo apt install python3.11 python3.11-venv python3.11-dev`
+  - Em Mac: via `brew install python@3.13`
+  - Em Ubuntu: via `sudo apt install python3.11 python3.11-venv python3.11-dev`
 
-* **uv** para gerenciar dependências do Python
+- **uv** para gerenciar dependências do Python
   [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv)
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-* **Node.js** `>= 18.x` (recomendado `18.x` ou `20.x`)
+- **Node.js** `>= 18.x` (recomendado `18.x` ou `20.x`)
 
-  * Em Mac: via `brew install node`
-  * Em Ubuntu: via [NodeSource](https://github.com/nodesource/distributions)
+  - Em Mac: via `brew install node`
+  - Em Ubuntu: via [NodeSource](https://github.com/nodesource/distributions)
 
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-* **Make** (já vem instalado em Mac e na maioria dos Linux)
+- **Make** (já vem instalado em Mac e na maioria dos Linux)
  mais se precisar instalar:
 
-  * Em Mac: via `brew install make`
-  * Em Ubuntu: via `sudo apt install make`
+  - Em Mac: via `brew install make`
+  - Em Ubuntu: via `sudo apt install make`
 
 ---
 
@@ -149,5 +149,3 @@ meli-challenge/
 
 - O projeto foi validado tanto em **MacOS** quanto em **Ubuntu 22.04 LTS**
 - Para ambientes Windows, recomenda-se usar WSL (Ubuntu)
-
----
