@@ -1,21 +1,23 @@
+// src/components/PaymentMethods.tsx
+
+'use client';
+
 interface PaymentMethodsProps {
   methods: string[];
 }
 
 export default function PaymentMethods({ methods }: PaymentMethodsProps) {
-  const icons: Record<string, string> = {
-    credit_card: '💳',
-    pix: '⚡',
-    boleto: '🏦',
-  };
-
   return (
-    <div className="space-x-2 text-xl">
-      {methods.map((method) => (
-        <span key={method} title={method} className="inline-block">
-          {icons[method] || '💰'}
-        </span>
-      ))}
+    <div className="space-y-2 mt-4">
+
+      <h2 className="font-semibold text-gray-900">Métodos de pagamento:</h2>
+
+      <ul className="list-disc list-inside text-gray-700">
+        {methods.map((method, index) => (
+          <li key={index}>{method}</li>
+        ))}
+      </ul>
+
     </div>
   );
 }

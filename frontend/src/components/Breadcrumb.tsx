@@ -1,9 +1,13 @@
+'use client';
+
+import Link from 'next/link';
+
 export default function Breadcrumb() {
   return (
-    <nav className="text-sm text-gray-600 mb-4">
-      <a href="#" className="hover:underline text-[#3483fa]">Home</a> &gt;{' '}
-      <a href="#" className="hover:underline text-[#3483fa]">Categoria</a> &gt;{' '}
-      <span className="text-gray-800">Produto</span>
-    </nav>
+    <div className="text-sm text-blue-600 mb-4">
+      <Link href="/" className="hover:underline">
+        ← Voltar para a lista de produtos
+      </Link>
+    </div>
   );
 }

@@ -1,19 +1,21 @@
-import { Product } from '@/lib/api';
+'use client';
 
-interface ProductSpecsProps {
-  product: Product;
-}
+type ProductSpecsProps = {
+  specs: Record<string, string>;
+};
 
-export default function ProductSpecs({ product }: ProductSpecsProps) {
+export default function ProductSpecs({ specs }: ProductSpecsProps) {
+  if (!specs) return null;
+
   return (
-    <div>
-      <h2 className="text-xl font-bold mb-4">Características do produto</h2>
-      <ul className="list-disc list-inside text-gray-700 space-y-1">
-        <li>ID do produto: {product.id}</li>
-        <li>Preço: R$ {product.price.toFixed(2)}</li>
-        <li>Estoque disponível: {product.stock}</li>
-        <li>Vendedor: {product.seller?.name}</li>
-        <li>Rating: {product.seller?.rating} / 5</li>
+    <div className="bg-white p-4 rounded shadow space-y-2">
+      <h2 className="text-lg font-semibold text-gray-800">Especificações do produto</h2>
+      <ul className="list-disc list-inside text-gray-700">
+        {Object.entries(specs).map(([key, value]) => (
+          <li key={key}>
+            <strong>{key}:</strong> {value}
+          </li>
+        ))}
       </ul>
     </div>
   );
