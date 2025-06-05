@@ -10,6 +10,7 @@ import ProductSummary from '@/components/ProductSummary';
 import PaymentMethods from '@/components/PaymentMethods';
 import ProductDescription from '@/components/ProductDescription';
 import BuyBox from '@/components/BuyBox';
+import ProductNotFound from '@/components/ProductNotFound';
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -21,12 +22,16 @@ export default function ProductDetailPage() {
     if (typeof id === 'string') {
       fetchProductById(id)
         .then(setProduct)
+        .catch((err) => {
+          console.error('Erro ao buscar produto:', err);
+          setProduct(null);
+        })
         .finally(() => setLoading(false));
     }
   }, [id]);
 
   if (loading) return <p className="p-4">Carregando produto...</p>;
-  if (!product) return <p className="p-4 text-red-600">Produto não encontrado.</p>;
+  if (!product) return <ProductNotFound />;
 
   return (
     <main className="max-w-7xl mx-auto p-4 space-y-6">
@@ -47,7 +52,8 @@ export default function ProductDetailPage() {
           <ProductSummary
             title={product.title}
             ratings={product.seller.rating}
-            ratingsCount={150}
+            // random
+            ratingsCount={Math.floor(Math.random() * 1000)}
           />
 
           <PaymentMethods methods={product.payment_methods} />
