@@ -4,7 +4,7 @@ from typing import List
 
 class SellerInfo(BaseModel):
     name: str
-    rating: float
+    sales: float
 
 
 class ProductDetail(BaseModel):
@@ -12,6 +12,7 @@ class ProductDetail(BaseModel):
     title: str
     description: str
     price: float
+    rating: float
     payment_methods: List[str]
     seller: SellerInfo
     stock: int

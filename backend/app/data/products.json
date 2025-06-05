@@ -4,10 +4,11 @@
     "title": "Samsung Galaxy A15",
     "description": "Samsung Galaxy A15 4G Dual SIM 128 GB Azul-claro 4 GB RAM",
     "price": 854.10,
+    "rating": 4.5,
     "payment_methods": ["cartao", "pix", "boleto"],
     "seller": {
-      "name": "Loja Oficial XYZ",
-      "rating": 4.8
+      "name": "MobileShop",
+      "sales": 2800
     },
     "stock": 25,
     "images": [
@@ -20,10 +21,11 @@
     "title": "Notebook Lenovo Ideapad",
     "description": "Notebook Lenovo Ideapad 1 Intel Core i3 1215U 8GB RAM 256GB SSD Windows 11 Home Tela 15,6",
     "price": 2799,
+    "rating": 2.1,
     "payment_methods": ["cartao", "pix"],
     "seller": {
       "name": "TechStore",
-      "rating": 4.5
+      "sales": 10000
     },
     "stock": 17,
     "images": [
@@ -36,10 +38,11 @@
     "title": "Fone De Ouvido Sem Fio",
     "description": "Fone De Ouvido Sem Fio M10 Tws Bluetooth 5.1 com Microfone Cor Preto resistente e água",
     "price": 23.58,
+    "rating": 5.6,
     "payment_methods": ["cartao", "pix", "boleto"],
     "seller": {
       "name": "AudioStore",
-      "rating": 4.10
+      "sales": 5899
     },
     "stock": 57,
     "images": [
@@ -51,10 +54,11 @@
     "title": "Relógio Smartwatch",
     "description": "Relógio Smartwatch Em Toque Alexa Ip68 Bluetooth 5.3 Caixa Branco Pulseira Preto Bisel Preto Desenho Da Pulseira Milanese",
     "price": 167.44,
+    "rating": 4.9,
     "payment_methods": ["cartao", "pix"],
     "seller": {
       "name": "GadgetWorld",
-      "rating": 4.6
+      "sales": 25000
     },
     "stock": 26,
     "images": [
@@ -66,10 +70,11 @@
     "title": "Câmera Filmadora 4k/30fps",
     "description": "Câmera Filmadora 4k/30fps 48mp 3'' Ir Visión Nocturna Câmera Câmera Filmadora Profissional P/ Youtuber Cor Preto 4k/30fps 48mp Câmera",
     "price": 799.40,
+    "rating": 1.8,
     "payment_methods": ["cartao"],
     "seller": {
       "name": "PhotoPro",
-      "rating": 3.9
+      "sales": 3487
     },
     "stock": 18,
     "images": [
@@ -81,10 +86,11 @@
     "title": "Óculos De Sol Masculino",
     "description": "Óculos De Sol Masculino Eco Bacon Beans Quadrado Preto",
     "price": 181.99,
+    "rating": 9.9,
     "payment_methods": ["pix", "boleto"],
     "seller": {
       "name": "Bacon Beans",
-      "rating": 7.9
+      "sales": 5000
     },
     "stock": 184,
     "images": [
@@ -98,10 +104,11 @@
     "title": "Sony PlayStation 5",
     "description": "Sony PlayStation 5 Slim Digital CFI-2000 1 TB",
     "price": 3299,
+    "rating": 4.8,
     "payment_methods": ["cartao", "pix", "boleto"],
     "seller": {
       "name": "GameZone",
-      "rating": 2.1
+      "sales": 10000
     },
     "stock": 256,
     "images": [
@@ -114,10 +121,11 @@
     "title": "Liquidificador L-99-fb",
     "description": "Liquidificador L-99-fb Turbo Power 2,2 L Potência De 550w Cor Preto Mondial 127V",
     "price": 99.90,
+    "rating": 3.2,
     "payment_methods": ["cartao", "pix", "boleto"],
     "seller": {
       "name": "EletroShop",
-      "rating": 7.1
+      "sales": 9877
     },
     "stock": 181,
     "images": [

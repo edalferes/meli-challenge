@@ -51,7 +51,7 @@ export default function ProductDetailPage() {
         <div className="md:col-span-1 flex flex-col space-y-6">
           <ProductSummary
             title={product.title}
-            ratings={product.seller.rating}
+            ratings={product.rating}
             // random
             ratingsCount={Math.floor(Math.random() * 1000)}
           />
@@ -63,7 +63,12 @@ export default function ProductDetailPage() {
 
         {/* Coluna 3: BuyBox */}
         <div className="md:col-span-1">
-          <BuyBox stock={product.stock ?? 0} sellerName={product.seller.name} />
+        <BuyBox
+          price={product.price}
+          stock={product.stock}
+          sellerName={product.seller.name}
+          sellerSales={product.seller.sales}
+        />
         </div>
 
       </div>

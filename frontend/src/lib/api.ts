@@ -7,11 +7,12 @@ export interface Product {
   title: string;
   description: string;
   price: number;
+  rating: number;
   payment_methods: string[];
   images: string[];
   seller: {
     name: string;
-    rating: number;
+    sales: number;
   };
   stock: number;
 }
