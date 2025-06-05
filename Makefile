@@ -15,7 +15,8 @@ help:
 	@echo "  make clean-frontend        - Clean frontend build files"
 	@echo "  make setup-backend         - Setup backend environment (uv sync)"
 	@echo "  make setup-frontend        - Install frontend dependencies (npm install)"
-	@echo "  make docker-compose        - Start Docker Compose services"
+	@echo "  make docker-compose-up     - Start Docker Compose services"
+	@echo "  make docker-compose-down   - Stop Docker Compose services"
 
 # Dev servers
 dev-frontend:
@@ -68,6 +69,10 @@ setup-frontend:
 	@echo "Installing frontend dependencies..."
 	@cd frontend && npm install
 
-docker-compose:
+docker-compose-up:
 	@echo "Starting Docker Compose services..."
 	@docker-compose up -d --build
+
+docker-compose-down:
+	@echo "Stopping Docker Compose services..."
+	@docker-compose down

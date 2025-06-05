@@ -149,8 +149,16 @@ meli-challenge/
 
 Caso queria rodar usando docker compose use:
 
+obs: é necessário ter o Docker e Docker Compose instalados
+
 ```bash
-make docker-compose
+make docker-compose-up
+```
+
+para parar:
+
+```bash
+make docker-compose-down
 ```
 
 ## Observações finais

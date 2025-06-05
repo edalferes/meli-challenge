@@ -5,7 +5,7 @@
     "description": "Samsung Galaxy A15 4G Dual SIM 128 GB Azul-claro 4 GB RAM",
     "price": 854.10,
     "rating": 4.5,
-    "payment_methods": ["cartao", "pix", "boleto"],
+    "payment_methods": ["cartão", "pix", "boleto"],
     "seller": {
       "name": "MobileShop",
       "sales": 2800
@@ -22,7 +22,7 @@
     "description": "Notebook Lenovo Ideapad 1 Intel Core i3 1215U 8GB RAM 256GB SSD Windows 11 Home Tela 15,6",
     "price": 2799,
     "rating": 2.1,
-    "payment_methods": ["cartao", "pix"],
+    "payment_methods": ["cartão", "pix"],
     "seller": {
       "name": "TechStore",
       "sales": 10000
@@ -39,7 +39,7 @@
     "description": "Fone De Ouvido Sem Fio M10 Tws Bluetooth 5.1 com Microfone Cor Preto resistente e água",
     "price": 23.58,
     "rating": 5.6,
-    "payment_methods": ["cartao", "pix", "boleto"],
+    "payment_methods": ["cartão", "pix", "boleto"],
     "seller": {
       "name": "AudioStore",
       "sales": 5899
@@ -55,7 +55,7 @@
     "description": "Relógio Smartwatch Em Toque Alexa Ip68 Bluetooth 5.3 Caixa Branco Pulseira Preto Bisel Preto Desenho Da Pulseira Milanese",
     "price": 167.44,
     "rating": 4.9,
-    "payment_methods": ["cartao", "pix"],
+    "payment_methods": ["cartão", "pix"],
     "seller": {
       "name": "GadgetWorld",
       "sales": 25000
@@ -71,7 +71,7 @@
     "description": "Câmera Filmadora 4k/30fps 48mp 3'' Ir Visión Nocturna Câmera Câmera Filmadora Profissional P/ Youtuber Cor Preto 4k/30fps 48mp Câmera",
     "price": 799.40,
     "rating": 1.8,
-    "payment_methods": ["cartao"],
+    "payment_methods": ["cartão"],
     "seller": {
       "name": "PhotoPro",
       "sales": 3487
@@ -105,7 +105,7 @@
     "description": "Sony PlayStation 5 Slim Digital CFI-2000 1 TB",
     "price": 3299,
     "rating": 4.8,
-    "payment_methods": ["cartao", "pix", "boleto"],
+    "payment_methods": ["cartão", "pix", "boleto"],
     "seller": {
       "name": "GameZone",
       "sales": 10000
@@ -122,7 +122,7 @@
     "description": "Liquidificador L-99-fb Turbo Power 2,2 L Potência De 550w Cor Preto Mondial 127V",
     "price": 99.90,
     "rating": 3.2,
-    "payment_methods": ["cartao", "pix", "boleto"],
+    "payment_methods": ["cartão", "pix", "boleto"],
     "seller": {
       "name": "EletroShop",
       "sales": 9877
