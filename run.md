@@ -45,7 +45,7 @@ sudo apt-get install -y nodejs
 ### Clone o repositório:
 
 ```bash
-git clone git@github.com:edalferes/meli-challenge.git
+git clone https://github.com/edalferes/meli-challenge.git
 cd meli-challenge
 ```
 
