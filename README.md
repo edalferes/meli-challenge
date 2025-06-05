@@ -70,7 +70,7 @@ meli-challenge/
 
 ## Execução do projeto
 
-Consulte o arquivo [RUN.md](./RUN.md) com instruções completas para rodar o projeto.
+Consulte o arquivo [RUN.md](./run.md) com instruções completas para rodar o projeto.
 
 Resumidamente:
 
