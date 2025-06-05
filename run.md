@@ -21,7 +21,6 @@ Este projeto contém uma aplicação fullstack composta por:
   [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv)
 
 ```bash
-# Instalação do uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
@@ -31,7 +30,6 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
   * Em Ubuntu: via [NodeSource](https://github.com/nodesource/distributions)
 
 ```bash
-# Exemplo com Node 18 LTS
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
