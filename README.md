@@ -58,7 +58,7 @@ meli-challenge/
     - Modal com detalhes da loja
     - Página responsiva
 - Pagina de listagem de produtos
-- Pagina de erro 404 personalizada
+- Pagina de erros personalizada
 
 ### Backend (API REST)
 
